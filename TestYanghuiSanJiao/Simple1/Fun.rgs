@@ -1,0 +1,26 @@
+HKCR
+{
+	Simple1.Fun.1 = s 'Fun Class'
+	{
+		CLSID = s '{6D7B6AB3-FD81-4CFC-B0D0-EEE6CF704504}'
+	}
+	Simple1.Fun = s 'Fun Class'
+	{
+		CLSID = s '{6D7B6AB3-FD81-4CFC-B0D0-EEE6CF704504}'
+		CurVer = s 'Simple1.Fun.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6D7B6AB3-FD81-4CFC-B0D0-EEE6CF704504} = s 'Fun Class'
+		{
+			ProgID = s 'Simple1.Fun.1'
+			VersionIndependentProgID = s 'Simple1.Fun'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{30D721F9-6ADF-4524-92F8-5D4736CEAF72}'
+		}
+	}
+}

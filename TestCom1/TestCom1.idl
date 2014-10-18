@@ -1,0 +1,40 @@
+// TestCom1.idl : IDL source for TestCom1.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (TestCom1.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(C5E06306-1ACF-414F-AF62-C78CE09898E9),
+	
+		helpstring("IFun Interface"),
+		pointer_default(unique)
+	]
+	interface IFun : IUnknown
+	{
+		[helpstring("method Add")] HRESULT Add([in] long n1,[in] long n2,[out,retval] long* pVal);
+		[helpstring("method Cat")] HRESULT Cat([in] BSTR s1,[in] BSTR s2,[out,retval] BSTR* pVal);
+	};
+
+[
+	uuid(77E81041-7FB2-45BD-B2B7-30F90A2AD871),
+	version(1.0),
+	helpstring("TestCom1 1.0 Type Library")
+]
+library TESTCOM1Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(AF8D0082-7BF9-4038-89ED-AA796F0EFEF1),
+		helpstring("Fun Class")
+	]
+	coclass Fun
+	{
+		[default] interface IFun;
+	};
+};

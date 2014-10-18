@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestVector_string", "TestVector_string\TestVector_string.vcxproj", "{20D9F682-2355-46CD-8989-2727CAF1EFDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20D9F682-2355-46CD-8989-2727CAF1EFDD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20D9F682-2355-46CD-8989-2727CAF1EFDD}.Debug|Win32.Build.0 = Debug|Win32
+		{20D9F682-2355-46CD-8989-2727CAF1EFDD}.Release|Win32.ActiveCfg = Release|Win32
+		{20D9F682-2355-46CD-8989-2727CAF1EFDD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

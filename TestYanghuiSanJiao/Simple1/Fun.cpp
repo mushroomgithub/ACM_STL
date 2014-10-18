@@ -1,0 +1,8 @@
+// Fun.cpp : Implementation of CFun
+#include "stdafx.h"
+#include "Simple1.h"
+#include "Fun.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// CFun
+

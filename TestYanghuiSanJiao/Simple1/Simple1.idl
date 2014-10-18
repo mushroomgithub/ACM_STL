@@ -1,0 +1,38 @@
+// Simple1.idl : IDL source for Simple1.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Simple1.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(0F366D08-4099-4A44-9227-F13A421AEEA1),
+		dual,
+		helpstring("IFun Interface"),
+		pointer_default(unique)
+	]
+	interface IFun : IDispatch
+	{
+	};
+
+[
+	uuid(30D721F9-6ADF-4524-92F8-5D4736CEAF72),
+	version(1.0),
+	helpstring("Simple1 1.0 Type Library")
+]
+library SIMPLE1Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(6D7B6AB3-FD81-4CFC-B0D0-EEE6CF704504),
+		helpstring("Fun Class")
+	]
+	coclass Fun
+	{
+		[default] interface IFun;
+	};
+};

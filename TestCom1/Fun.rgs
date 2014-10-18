@@ -1,0 +1,25 @@
+HKCR
+{
+	TestCom1.Fun.1 = s 'Fun Class'
+	{
+		CLSID = s '{AF8D0082-7BF9-4038-89ED-AA796F0EFEF1}'
+	}
+	TestCom1.Fun = s 'Fun Class'
+	{
+		CLSID = s '{AF8D0082-7BF9-4038-89ED-AA796F0EFEF1}'
+		CurVer = s 'TestCom1.Fun.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AF8D0082-7BF9-4038-89ED-AA796F0EFEF1} = s 'Fun Class'
+		{
+			ProgID = s 'TestCom1.Fun.1'
+			VersionIndependentProgID = s 'TestCom1.Fun'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{77E81041-7FB2-45BD-B2B7-30F90A2AD871}'
+		}
+	}
+}
